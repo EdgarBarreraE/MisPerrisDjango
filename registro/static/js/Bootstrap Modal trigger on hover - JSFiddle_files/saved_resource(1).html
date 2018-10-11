@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://fiddle.jshell.net/gabelloyd/721u3sfh/show/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Bootstrap Modal trigger on hover</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./jquery-1.10.1.js.descarga"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+      <script type="text/javascript" src="./jquery-ui.js.descarga"></script>
+      <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+      <script type="text/javascript" src="./bootstrap.min.js.descarga"></script>
+  <style type="text/css">
+    #target {
+    height: 400px;
+    width: 600px;
+    padding: 20px;
+    margin: 10px auto;
+    border: 1px solid gray;
+    border-radius: 4px;
+    position: relative;
+}
+.modal {
+    position: absolute;
+}
+.modal-left {
+    margin: 30px;
+}
+.modal-right {
+    margin: 30px;
+    float: right;
+}
+  </style>
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    $(window).load(function(){
+      
+$("#b1").hover(function () {
+    $('#modal1').modal({
+        show: true,
+        backdrop: false
+    })
+});
+
+$("#b2").hover(function () {
+    $('#modal2').modal({
+        show: true,
+        backdrop: false
+    })
+});
+
+    });
+
+</script>
+
+</head>
+<body class="modal-open" style="padding-right: 19px;">
+  <div id="target">
+    <p class="lead">We want to have the modals show on opposite sides of the canvas. We hide the backdrop, which also disbles the ability to click out of the modal using the backdrop (because it doesn't exist!). The modals have been changed from <code>position:fixed</code> to <code>position:absolute</code> so they remain within the #target container</p>
+    <div class="clearfix"></div>
+    <!-- Button trigger modal -->
+    <div type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal1" id="b1">Launch Left Modal</div>
+    <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#modal2" id="b2">Launch Right Modal</button>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-sm modal-left">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="modal1Label">Left Modal title</h4>
+
+                </div>
+                <div class="modal-body">Some Demo For Modal 1</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade in" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="false" data-trigger="hover" style="display: block;">
+        <div class="modal-dialog modal-sm modal-right">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="modal2Label">Right Modal title</h4>
+
+                </div>
+                <div class="modal-body">Some Demo For Modal 2</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "721u3sfh"
+      }], "*")
+    }
+  </script>
+
+
+</body></html>

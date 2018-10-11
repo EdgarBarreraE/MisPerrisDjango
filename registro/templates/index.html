@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es_CL">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% load static %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "css/estilos12.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "js/Bootstrap Modal trigger on hover - JSFiddle.html" %}" type="javascript">
+        <title>Mis Perris (Barrera-Rojas)</title>
+    </head>
+
+    <body>
+        <header class="container-fluid fondo_header">
+            <div class="row">
+            <img src="{% static "img/logo.png" %}" alt="" class="col-xs-12 img-fluid mx-auto d-block logo">
+            </div>
+
+            <div class="row naveg">
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 container-fluid color_oscuro">
+                        <button class="button">Inicio</button>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 container-fluid color_oscuro">
+                        <button class="button">quiénes somos</button>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 container-fluid color_oscuro">
+                        <button class="button">servicios</button>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 container-fluid color_oscuro">
+                        <button class="button">contáctenos</button>
+                </div>
+
+            </div>
+
+            <div id="carouselIndicators" class="carousel slide img-fluid max-width:100% height:auto" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner col-xs-12">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static "img/adoptados/Tom.jpg" %}" alt="Tom">
+                        <div class="text-block">
+                            <p> Estamos felices de tener a Tom en casa. Es un super fiel compañero.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-xs-12">
+                       <img class="d-block w-100" src="{% static "img/adoptados/Apolo.jpg" %}" alt="Apolo">
+                       <div class="text-block">
+                            <p> Apolo trajo una alegría inesperada en nuestro hogar.
+                                Nunca nos arrepentiremos de haberlo adoptado</p>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item col-xs-12">
+                       <img class="d-block w-100" src="{% static "img/adoptados/Duque.jpg" %}" alt="Duque">
+                       <div class="text-block shadow">
+                            <p> Duque se ha convertido en mi gran compañero de aventuras.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="container-fluid col-xs-12 icons color_oscuro text-center"> 
+
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="{% static "img/icons/Facebook.png" %}" alt="" height="90px" class="icon">
+                </a>
+                <a href="" target="_blank">
+                    <img src="{% static "img/icons/Google-Plus.png" %}" alt="" height="90px" class="icon">
+                </a>
+                <a href="" target="_blank">
+                    <img src="{% static "img/icons/instagram.png" %}" alt="" height="90px" class="icon">
+                </a>
+                <a href="https://mail.google.com/" target="_blank">
+                    <img src="{% static "img/icons/email-icons-business-card-595331-7316311.png" %}"
+                            alt="" height="90px" class="icon">
+                </a>
+            </div>
+
+        </header>
+            
+        <div class="body2" align="right">
+            
+            <h2>RESCATE</h2>
+            <h4>ETAPA UNO</h4>
+            <h3>______________</h3>
+            <h3>Rescatamos perros en situación de peligro y/o abandono.
+                Los rehabilitamos y los preparamos para buscarles un hogar.</h3>
+            <img src="{% static "img/rescate.jpg" %}" alt="" width="55%">
+        </div>
+        <div class="body3">
+                <img src="{% static "img/crowfunding.jpg" %}" alt="" width="55%" >           
+                <h2>CROWFUNDING</h2>
+                <h4>FINANCIAMIENTO</h4>
+                <h3>______________</h3>
+                <h3>Sigue nuestras redes sosciales para informarte de las diversas campañas y 
+                    actividades que realizamos para obtener financiamiento para seguir ayudando.</h3>
+
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row rcampanas">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <img src="{% static "img/icons/Campañas.jpg" %}" alt="" id="campanaslogo">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h5>¡Haz click en las imágenes para saber de cada perrito!</h5>
+                </div>
+            </div>
+
+        </div>
+        
+        
+        <div class="container-fluid body4 color_oscuro">
+            <div class="row rrescatados">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 crescatados">
+
+                    <img type="button" src="{% static "img/rescatados/Oso_tn.jpg" %}" alt="" class="rescatado"
+                    data-toggle="modal" data-target="#modal1" id="boso">
+
+                   <div id="target">
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-left">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                         <h4 class="modal-title" id="modal1Label">OSO</h4>
+                                    </div>
+                                    <div class="modal-body">Éste es el mejor perrito y más bien portado del mundo</div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img type="button" src="{% static "img/rescatados/Maya_tn.jpg" %}" alt="" class="rescatado"
+                    data-toggle="modal" data-target="#modal2" id="bmaya">
+                    <div id="target">
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                                <div class="modal-dialog modal-sm modal-left">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                             <h4 class="modal-title" id="modal1Label">MAYA</h4>
+                                        </div>
+                                        <div class="modal-body">La perrita más juguetona. te encantará. ¡Adóptala!</div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <img type="button" src="{% static "img/rescatados/Wifi_tn.jpg" %}" alt="" class="rescatado"
+                    data-toggle="modal" data-target="#modal3" id="bwifi">
+                    <div id="target">
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                                <div class="modal-dialog modal-sm modal-left">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                             <h4 class="modal-title" id="modal1Label">WIFI</h4>
+                                        </div>
+                                        <div class="modal-body">Este perrito te mantendrá siempre conectado con él.</div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 crescatados">
+                    <img type="button" src="{% static "img/rescatados/Chocolate_tn.jpg" %}" alt="" class="rescatado"
+                        data-toggle="modal" data-target="#modal4" id="bchocolate">
+                        <div id="target">
+                                <!-- Modal -->
+                            <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                                <div class="modal-dialog modal-sm modal-left">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                                <h4 class="modal-title" id="modal1Label">CHOCOLATE</h4>
+                                        </div>
+                                        <div class="modal-body">Adopta al perrito más dulce de todos. Está deseoso de amor.</div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <img type="button" src="{% static "img/rescatados/Pexel_tn.jpg" %}" alt="" class="rescatado"
+                        data-toggle="modal" data-target="#modal5" id="bpexel">
+
+                    <div id="target">
+                            <!-- Modal -->
+                        <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-left">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                            <h4 class="modal-title" id="modal1Label">PEXEL</h4>
+                                    </div>
+                                    <div class="modal-body">Pexel es único y encontrará siempre formas originales de darte amor. Adopta a este perrito.</div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 crescatados">
+
+                    <img type="button" src="{% static "img/rescatados/Bigotes_tn.jpg" %}" alt="" class="rescatado"
+                        data-toggle="modal" data-target="#modal6" id="bbigotes">
+                    <div id="target">
+                            <!-- Modal -->
+                        <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-left">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                            <h4 class="modal-title" id="modal1Label">BIGOTES</h4>
+                                    </div>
+                                    <div class="modal-body">Confía en este perro bigotón. Adorará tus juguetes de peluche.</div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img type="button" src="{% static "img/rescatados/Luna_tn.jpg" %}" alt="" class="rescatado"
+                        data-toggle="modal" data-target="#modal7" id="bluna">
+                    <div id="target">
+                            <!-- Modal -->
+                        <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-left">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                            <h4 class="modal-title" id="modal1Label">LUNA</h4>
+                                    </div>
+                                    <div class="modal-body">Esta hermosa perrita espera ansiosa a un amigo humano que la acompañe en las noches, con o sin luna.</div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row container-fluid">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3>Desarrollo Web y Mobile</h3>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <button type="button" class="btn btn-succes img-fluid buttonReg"
+                            onclick="location.href='form.html';">Regístrate</button>
+                </div>
+            </div>
+        </footer>
+   
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <script src="{% static "js/javascript12.js" %}"> </script>
+    </body>
+</html>
+

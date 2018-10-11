@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://jsfiddle.net/721u3sfh/848/embedded/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Modal trigger on hover - JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script src="./highlight.pack.js.descarga"></script>
+      <script src="./embed.js.descarga"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+      <script type="text/javascript">
+        var height;
+        var force_height = null;
+        var slug = "721u3sfh";
+        var show_src = "//fiddle.jshell.net/721u3sfh/848/show/light/";
+        var resize_element_counter = 0;
+        var shell_edit_url = "/721u3sfh/848/light/";
+
+      </script>
+
+    <link rel="stylesheet" media="screen" href="./css">
+
+    <style type="text/css" media="screen">
+    </style>
+
+  </head>
+  <body>
+    <div id="wrapper">
+        <header>
+          <h1><a href="http://jsfiddle.net/721u3sfh/848/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=721u3sfh" target="_blank">Edit in JSFiddle</a></h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="&quot;active&quot;">
+                  <a data-trigger-type="js" href="http://jsfiddle.net/721u3sfh/848/embedded/#JavaScript">JavaScript</a>
+                </li>
+                <li>
+                  <a data-trigger-type="html" href="http://jsfiddle.net/721u3sfh/848/embedded/#HTML">HTML</a>
+                </li>
+                <li>
+                  <a data-trigger-type="css" href="http://jsfiddle.net/721u3sfh/848/embedded/#CSS">CSS</a>
+                </li>
+                <li>
+                  <a data-trigger-type="result" href="http://jsfiddle.net/721u3sfh/848/embedded/#Result">Result</a>
+                </li>
+                <li>
+                  <a data-trigger-type="resources" href="http://jsfiddle.net/721u3sfh/848/embedded/#Resources">Resources</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 81.0938px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont active hljs javascript">$(<span class="hljs-string">"#b1"</span>).hover(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#modal1'</span>).modal({
+        <span class="hljs-attr">show</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">backdrop</span>: <span class="hljs-literal">false</span>
+    })
+});
+
+$(<span class="hljs-string">"#b2"</span>).hover(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#modal2'</span>).modal({
+        <span class="hljs-attr">show</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">backdrop</span>: <span class="hljs-literal">false</span>
+    })
+});</pre>
+              <pre class="tCont hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"target"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lead"</span>&gt;</span>We want to have the modals show on opposite sides of the canvas. We hide the backdrop, which also disbles the ability to click out of the modal using the backdrop (because it doesn't exist!). The modals have been changed from <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>position:fixed<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>position:absolute<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> so they remain within the #target container<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    
+    <span class="hljs-comment">&lt;!-- Button trigger modal --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-lg"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#modal1"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"b1"</span>&gt;</span>Launch Left Modal<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-lg pull-right"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#modal2"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"b2"</span>&gt;</span>Launch Right Modal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Modal 1 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal1"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"modal1Label"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog modal-sm modal-left"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-header"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal1Label"</span>&gt;</span>Left Modal title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-body"</span>&gt;</span>Some Demo For Modal 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-footer"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-default"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Modal 2 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal2"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"modal2Label"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-trigger</span>=<span class="hljs-string">"hover"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog modal-sm modal-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-header"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal2Label"</span>&gt;</span>Right Modal title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-body"</span>&gt;</span>Some Demo For Modal 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-footer"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-default"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+              <pre class="tCont hljs css"><span class="hljs-selector-id">#target</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">400px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span> auto;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid gray;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span>;
+    <span class="hljs-attribute">position</span>: relative;
+}
+<span class="hljs-selector-class">.modal</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+}
+<span class="hljs-selector-class">.modal-left</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">30px</span>;
+}
+<span class="hljs-selector-class">.modal-right</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">30px</span>;
+    <span class="hljs-attribute">float</span>: right;
+}</pre>
+              <div class="tCont result " id="result"></div>
+              <div class="tCont resources " id="resources">
+                <h3>External resources loaded into this fiddle:</h3>
+                <ul>
+                    <li><a href="http://code.jquery.com/ui/1.10.3/jquery-ui.js" target="_blank">jquery-ui.js</a></li>
+                    <li><a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" target="_blank">bootstrap.min.css</a></li>
+                    <li><a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" target="_blank">bootstrap.min.js</a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+  
+
+</body></html>

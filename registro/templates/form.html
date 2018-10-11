@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FormMisPerris</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilosform.css" type="text/css">
+</head>
+
+<body>
+    <header class="container-fluid fondo_header">
+        <div>
+                <div class="footer">
+                        <a class="btn btn-outline-secondary" href="index12.html" role="button">Volver a Pagina Principal</a>
+                </div>
+            <img src="img/logo.png" alt="" class="img-fluid mx-auto d-block logo">
+        </div>
+    </header>
+    <div class="container">
+        <div class="row main">
+            <div class="main-login main-center">
+                <h3 class="texto-header">Gracias por contribuir! por favor ingresa tus datos:</h3>
+                <form action="index02.html" method="GET" id="formulario">
+
+                    <div class="form-group">
+                        <label for="Nombres" class="cols-sm-2 control-label">Nombres</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="txtname" name="Nombres" id="" placeholder="Escribe tu Nombres" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Apellidos" class="cols-sm-2 control-label">Apellidos</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="Apellidos" id="txtapellido" placeholder="Escribe tus Apellidos" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Rut" class="cols-sm-2 control-label">Rut</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Correo" class="cols-sm-2 control-label">Correo</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="Correo" id="" placeholder="Escribe tu correo" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Fecnac" class="cols-sm-2 control-label">Fecha de nacimiento</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="date" min="1912-01-01" max="2001-01-01" class="form-control" name="Fecnac" id="" placeholder="Fecha de nacimiento"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="NTel" class="cols-sm-2 control-label">Número de telefono (+569)</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="text" maxlength="8" minlength="8" class="form-control" name="NTel" id="Ntel" placeholder="Numero de telefono" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Casa" class="cols-sm-2 control-label">Tipo de Casa</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <select multiple class="form-control" id="exampleFormControlSelect2">
+                                    <option value="Casa con patio grande">Casa con patio grande</option>
+                                    <option value="Casa con patio pequeño">Casa con patio pequeño</option>
+                                    <option value="Casa sin patio">Casa sin patio</option>
+                                    <option value="Departamento">Departamento</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Region" class="cols-sm-2 control-label">Region</label>
+                        <select multiple class="form-control" id="regiones" class="cols-sm-4"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Comuna" class="cols-sm-2 control-label">Comuna</label>
+                        <select multiple class="form-control" id="comunas" class="cols-sm-10"></select>
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-outline-success">Registrar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/javascriptform.js"></script>
+
+</body>
+
+</body>
+
+</html>
