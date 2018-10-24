@@ -12,3 +12,6 @@ def form(request):
 def crear(request):
     nombre = request.POST.get('nombre','')
     return HttpResponse("nombre' : " + nombre)
+
+def Inicio(request):
+    return render(request,'Inicio.html',{})
