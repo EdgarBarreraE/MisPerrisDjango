@@ -6,7 +6,7 @@ from django.db import models
 class Usuario(models.Model):
     nombres = models.CharField(max_length=100)
     apellidos = models.CharField(max_length=100)
-    rut = models.CharField(max_length=100)
+    rut = models.CharField(max_length=10)
     email = models.EmailField(max_length=100)
     fechaNacimiento = models.DateField()
     telefono = models.IntegerField()
