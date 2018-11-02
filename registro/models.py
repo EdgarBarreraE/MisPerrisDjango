@@ -10,7 +10,7 @@ class Usuario(models.Model):
     email = models.EmailField(max_length=100)
     fechaNacimiento = models.DateField()
     telefono = models.IntegerField()
-    tipoCasa = models.CharField(max_length=100)
+    tipoCasa = models.CharField(max_length=30)
     region = models.CharField(max_length=100)
     comuna = models.CharField(max_length=100)
 

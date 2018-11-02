@@ -15,3 +15,6 @@ def crear(request):
 
 def Inicio(request):
     return render(request,'Inicio.html',{})
+
+def form_rescatado(request):
+    return render(request,'form_rescatado.html',{})
