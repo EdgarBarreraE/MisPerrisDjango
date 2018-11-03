@@ -15,6 +15,7 @@
                 <th>Raza</th>
                 <th>Estado</th>
                 <th>Edición</th>
+                <th>Eliminar</th>
             </tr>
             {% for e in elementos %}
             <tr>
@@ -24,7 +25,8 @@
                     {% elif e.estado == 2 %} Disponible
                     {% elif e.estado == 3 %} Adoptado
                     {% endif %}</td>
-                <td> <a href="/form_rescatado/editar/{{e.id}}"> Editar </a> </td>
+                <td> <a href="/form_rescatado/editar/{{e.id}}">  Editar </a> </td>
+                <td> <a href="/form_rescatado/eliminar/{{e.id}}">  Eliminar </a> </td>
                 <br>
             </tr>
         </table>

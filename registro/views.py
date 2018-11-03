@@ -53,9 +53,8 @@ def editado(request,id):
     perro.save()
     return HttpResponse("El perrito "+nombre+" ha sido sido editado")
 
-"""
-def eliminar_perro(request,id)
-perro = Rescatado.objects.get(pk=id)
-perro.delete()
-return HttpResponse("Perrito ha sido eliminado de los registros.")
-"""
+
+def eliminar(request,id):
+    perro = Rescatado.objects.get(pk=id)
+    perro.delete()
+    return HttpResponse("Perrito ha sido eliminado de los registros.")
