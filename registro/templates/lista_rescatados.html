@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista Rescatados</title>
+</head>
+<body>
+    <h1>Lista de Perritos registrados</h1>
+
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Estado</th>
+                <th>Edición</th>
+            </tr>
+            {% for e in elementos %}
+            <tr>
+                <td>{{e.nombre}}</td>
+                <td>{{e.raza}}</td>
+                <td>{% if e.estado == 1 %} Rescatado
+                    {% elif e.estado == 2 %} Disponible
+                    {% elif e.estado == 3 %} Adoptado
+                    {% endif %}</td>
+                <td> <a href="/form_rescatado/editar/{{e.id}}"> Editar </a> </td>
+                <br>
+            </tr>
+        </table>
+        {% endfor %}
+
+</body>
+</html>

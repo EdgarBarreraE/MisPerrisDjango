@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FormRescatados</title>
+    <title>FormEditarRescatados</title>
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
     <link rel="stylesheet" href="{% static "css/bootstrap-grid.min.css.map" %}">
     <link rel="stylesheet" href="{% static "css/bootstrap-reboot.css" %}">
@@ -28,10 +28,10 @@
     <div class="container">
         <div class="row main">
             <div class="main-login main-center">
-                <h3 class="texto-header">Registrar Rescatado</h3>
+                <h3 class="texto-header">Editar Rescatado</h3>
                 <br>
                 <!--ojo revisar el action y lo de la imagen-->
-                <form action="crear_rescatado" method="POST" id="formulario" enctype="multipart/form-data">
+                <form action="/form_rescatado/editado/{{perro.id}}" method="POST" id="formulario" enctype="multipart/form-data">
 
                     {% csrf_token %}
                     <!--FOTO-->                      
@@ -48,7 +48,7 @@
                         <label for="nombre" class="cols-sm-2 control-label">Nombre</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="txtname" name="nombre" id="" placeholder="Nombre de perro rescatado" />
+                                <input type="text" class="form-control" id="txtname" name="nombre" value={{perro.nombre}} id="" placeholder="Nombre de perro rescatado" />
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                         <label for="raza" class="cols-sm-2 control-label">Raza</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input type="text" class="form-control" name="raza" id="txtraza" placeholder="Raza de perro rescatado" />
+                                <input type="text" class="form-control" name="raza" value={{perro.raza}} id="txtraza" placeholder="Raza de perro rescatado" />
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         <label for="descripcion" class="cols-sm-2 control-label">Descripción</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input type="textarea" class="form-control" id="" name="descripcion" placeholder="Descripción">
+                                <input type="textarea" class="form-control" id="" name="descripcion" value={{perro.descripcion}} placeholder="Descripción">
                             </div>
                         </div>
                     </div>
@@ -86,15 +86,13 @@
                     </div>
 
                     <div class="form-group ">
-                        <button type="submit" class="btn btn-outline-success">Registrar</button>
+                        <button type="submit" class="btn btn-outline-success">Editar</button>
                     </div>
 
                 </form>
             </div>
         </div>
     </div>
-
-    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{% static "js/jquery-3.3.1.js" %}"></script>
