@@ -64,3 +64,19 @@ def buscar(request):
     perritos = Rescatado.objects.filter(estado=num_estado)
     return render(request,'buscar.html',{'perritos':perritos})
 
+def crear_persona(request):
+    nombres = request.POST.get('nombres', '')
+    apellidos = request.POST.get('apellidos', '')
+    rut = request.POST.get('rut', '')
+    email = request.POST.get('email', '')
+    fechaNacimiento = request.POST.get('fechaNacimiento', '1912-01-01')
+    telefono = request.POST.get('telefono', 11111111)
+    tipoCasa = request.POST.get('tipoCasa', '')
+    region = request.POST.get('region', '')
+    comuna = request.POST.get('comuna', '')
+    persona = Usuario(nombres=nombres,apellidos=apellidos,rut=rut,email=email,fechaNacimiento=fechaNacimiento,
+    telefono=telefono,tipoCasa=tipoCasa,region=region,comuna=comuna)
+    persona.save()
+    return HttpResponse("Usuario "+nombres+" "+apellidos+", ha sido registrado")
+
+
