@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscar</title>
+</head>
+<body>
+    <h1>BUSCAR</h1>
+
+    <form action="/form_rescatado/buscar/" method="POST" id="formulario" enctype="multipart/form-data">
+    {% csrf_token %}
+        <label for="estado" class="cols-sm-2 control-label">Estado</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <input type="number" class="form-control" name="estado" id="" placeholder="Num Estado" />
+            </div>
+        </div>
+        <br>
+        <div class="form-group ">
+                <button type="submit" class="btn btn-outline-success">Listar</button>
+        </div>
+    </form>
+    
+
+    <h1>Listado Perritos Buscados</h1>
+    
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Raza</th>
+            <th>Estado</th>
+
+        </tr>
+        {% for p in perritos %}
+        <tr>
+            <td>{{p.nombre}}</td>
+            <td>{{p.raza}}</td>
+            <td>{% if p.estado == 1 %} Rescatado
+                {% elif p.estado == 2 %} Disponible
+                {% elif p.estado == 3 %} Adoptado
+                {% endif %}</td>
+            <br>
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>

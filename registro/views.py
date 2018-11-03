@@ -58,3 +58,9 @@ def eliminar(request,id):
     perro = Rescatado.objects.get(pk=id)
     perro.delete()
     return HttpResponse("Perrito ha sido eliminado de los registros.")
+
+def buscar(request):
+    num_estado = request.POST.get('estado',0)
+    perritos = Rescatado.objects.filter(estado=num_estado)
+    return render(request,'buscar.html',{'perritos':perritos})
+
