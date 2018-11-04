@@ -65,15 +65,15 @@ def buscar(request):
     return render(request,'buscar.html',{'perritos':perritos})
 
 def crear_persona(request):
-    nombres = request.POST.get('nombres', '')
-    apellidos = request.POST.get('apellidos', '')
+    nombres = request.POST.get('Nombres', '')
+    apellidos = request.POST.get('Apellidos', '')
     rut = request.POST.get('rut', '')
-    email = request.POST.get('email', '')
-    fechaNacimiento = request.POST.get('fechaNacimiento', '1912-01-01')
-    telefono = request.POST.get('telefono', 11111111)
-    tipoCasa = request.POST.get('tipoCasa', '')
-    region = request.POST.get('region', '')
-    comuna = request.POST.get('comuna', '')
+    email = request.POST.get('Correo', '')
+    fechaNacimiento = request.POST.get('Fecnac', '1912-01-01')
+    telefono = request.POST.get('NTel', 11111111)
+    tipoCasa = request.POST.get('exampleFormControlSelect2', '')
+    region = request.POST.get('regiones', '')
+    comuna = request.POST.get('comunas', '')
     persona = Usuario(nombres=nombres,apellidos=apellidos,rut=rut,email=email,fechaNacimiento=fechaNacimiento,
     telefono=telefono,tipoCasa=tipoCasa,region=region,comuna=comuna)
     persona.save()
