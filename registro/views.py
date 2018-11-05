@@ -6,6 +6,8 @@ from django.http import  HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,logout, login as login_user
 from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
 
 # Create your views here.
 
@@ -100,5 +102,21 @@ def crear_persona(request):
     telefono=telefono,tipoCasa=tipoCasa,region=region,comuna=comuna)
     persona.save()
     return HttpResponse("Usuario "+nombres+" "+apellidos+", ha sido registrado")
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'password.html', {
+        'form': form
+    })
 
 

@@ -1,12 +1,9 @@
 from django.urls import path
+from django.conf.urls import url, include
 from . import views
-
-"""
-from django.contrib.auth.views import password_reset, password_reset_done, password_reset_complete, password_reset_confirm
-"""
-
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -22,6 +19,8 @@ urlpatterns = [
     path('form_rescatado/editado/<int:id>', views.editado, name="editado"),
     path('form_rescatado/eliminar/<int:id>', views.eliminar, name="eliminar"),
     path('form_rescatado/buscar/', views.buscar, name="buscar"),
-    path('form/crear_persona',views.crear_persona,name="crear_persona")
+    path('form/crear_persona',views.crear_persona,name="crear_persona"),
+    path('password', views.change_password, name='change_password'),
+
 
 ] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
