@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
     <title>Buscar</title>
 </head>
 <body>
@@ -12,12 +13,13 @@
     <form action="/form_rescatado/buscar/" method="POST" id="formulario" enctype="multipart/form-data">
     {% csrf_token %}
         <label for="estado" class="cols-sm-2 control-label">Estado</label>
-        <div class="cols-sm-10">
-            <div class="input-group">
-                <input type="number" class="form-control" name="estado" id="" placeholder="Num Estado" />
-            </div>
+
+        <div class="input-group">
+            <input type="radio" name="estado" value=1 checked class="radiobtn"> Rescatado<br>
+            <input type="radio" name="estado" value=2 class="radiobtn"> Disponible<br>
+            <input type="radio" name="estado" value=3 class="radiobtn"> Adoptado<br>
         </div>
-        <br>
+
         <div class="form-group ">
                 <button type="submit" class="btn btn-outline-success">Listar</button>
         </div>
@@ -31,7 +33,8 @@
             <th>Nombre</th>
             <th>Raza</th>
             <th>Estado</th>
-
+            <th>Foto</th>
+            <th>Descripcion</th>
         </tr>
         {% for p in perritos %}
         <tr>
@@ -41,9 +44,31 @@
                 {% elif p.estado == 2 %} Disponible
                 {% elif p.estado == 3 %} Adoptado
                 {% endif %}</td>
+            <td>
+                    <img src="{{p.foto.url}}">
+            </td>
+            <td>{{p.descripcion}}</td>
             <br>
         </tr>
     </table>
-    {% endfor %}
+        {% endfor %}
+
+<!--
+         {% for p in object.photo_set.all %}
+         <td>
+             <div>{{ p.title }}</div>
+             <div>
+                 <a href="{% url "photo-detail" p.id %}">
+                     <img src="{% static p.photo.url %}" style="width:200px;height:200px"/>
+                 </a>
+             </div>
+         </td>
+     {% endfor %}
+
+-->
+
+
+
+
 </body>
 </html>

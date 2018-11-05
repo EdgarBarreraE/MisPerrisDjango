@@ -1,6 +1,10 @@
 from django.urls import path
 from . import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('Index',views.index,name="index"),
     path('form/',views.form,name="form"),
@@ -14,4 +18,4 @@ urlpatterns = [
     path('form_rescatado/buscar/', views.buscar, name="buscar"),
     path('form/crear_persona',views.crear_persona,name="crear_persona")
 
-]
+] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

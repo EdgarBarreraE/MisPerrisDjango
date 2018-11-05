@@ -28,6 +28,7 @@ def crear_rescatado(request):
     descripcion = request.POST.get('descripcion', '')
     estado = request.POST.get('estado', 1)
     perro = Rescatado(foto=foto,nombre=nombre,raza=raza,descripcion=descripcion,estado=estado)
+    print(perro.foto)
     perro.save()
     return HttpResponse("El perrito "+nombre+" de raza "+raza+", ha sido correctamente registrado")
 
