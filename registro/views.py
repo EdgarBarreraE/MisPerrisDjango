@@ -1,7 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import  HttpResponse
 from .models import Usuario
 from .models import Rescatado
+from django.http import  HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,logout, login as login_user
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
+
 
 # Create your views here.
 
@@ -15,8 +22,25 @@ def crear(request):
     nombre = request.POST.get('nombre','')
     return HttpResponse("nombre' : " + nombre)
 
-def Inicio(request):
-    return render(request,'Inicio.html',{})
+def cerrar_sesion(request):
+    logout(request)
+    return redirect("inicio")
+
+def logearse(request):
+    nombre = request.POST.get("usuario",False)
+    contrasenia = request.POST.get("contrasenia",False)
+    user = authenticate(request, username=nombre, password=contrasenia)
+    print(nombre,contrasenia)
+    print(user)
+    if user is not None:
+        login_user(request, user)
+        return redirect("index")
+    else:
+        messages.error(request,'El usuario o la contraseña no es válido ')
+        return redirect("inicio")
+
+def inicio(request):
+    return render(request,'inicio.html',{})
 
 def form_rescatado(request):
     return render(request,'form_rescatado.html',{})
@@ -79,6 +103,22 @@ def crear_persona(request):
     telefono=telefono,tipoCasa=tipoCasa,region=region,comuna=comuna)
     persona.save()
     return HttpResponse("Usuario "+nombres+" "+apellidos+", ha sido registrado")
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'password.html', {
+        'form': form
+    })
 
 
 def administrador(request):
