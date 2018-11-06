@@ -26,6 +26,7 @@
         </div>
     </header>
     <div class="container">
+            {% if user.is_authenticated and user.is_staff %}
         <div class="row main">
             <div class="main-login main-center">
                 <h3 class="texto-header">Registrar Rescatado</h3>
@@ -90,6 +91,9 @@
                     </div>
 
                 </form>
+            {% else %}
+        <h1 style="color:white">No tienes permiso para ver el contenido de esta página!</h1>
+            {% endif %}
             </div>
         </div>
     </div>

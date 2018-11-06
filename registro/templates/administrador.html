@@ -17,33 +17,32 @@
 </head>
 
 <body>
-    <header class="container-fluid fondo_header">
-        <div>
-                <div class="footer">
-                        <a class="btn btn-outline-secondary" href="{% url "index" %}" role="button">Volver</a>
-                </div>
-            <img src="{% static "img/logo.png" %}" alt="" class="img-fluid mx-auto d-block logo">
-        </div>
-    </header>
-    <div class="container">
-        <div class="row main">
         
-                    <div class="form-group">
-                        <a href="{% url 'form_rescatado' %}" class="btn btn-success" role="button">Registrar perrito</a>
-                    </div>
-                    <div class="form-group">
-                        <a href="{% url 'lista_rescatados' %}" class="btn btn-success" role="button">Editar perrito</a>
-                    </div>
+        <header class="container-fluid fondo_header">
+                <div>
+                        <div class="footer">
+                                <a class="btn btn-outline-secondary" href="{% url "index" %}" role="button">Volver</a>
+                        </div>
+                    <img src="{% static "img/logo.png" %}" alt="" class="img-fluid mx-auto d-block logo">
+                </div>
+            </header>
+            {% if user.is_authenticated and user.is_staff %}
+            <div class="container">
+                <div class="row main">
+                
+                            <div class="form-group">
+                                <a href="{% url 'form_rescatado' %}" class="btn btn-success" role="button">Registrar perrito</a>
+                            </div>
+                            <div class="form-group">
+                                <a href="{% url 'lista_rescatados' %}" class="btn btn-success" role="button">Editar perrito</a>
+                            </div>
+        
+                </div>
+            </div>
 
-        </div>
-
-
-
-    </div>
-
-
-    
-
+        {% else %}
+        <h1 style="color:white">No tienes permiso para ver el contenido de esta página!</h1>
+        {% endif %}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{% static "js/jquery-3.3.1.js" %}"></script>
     <script src="{% static "js/jquery.validate.js" %}"></script>
