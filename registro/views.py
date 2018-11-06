@@ -81,3 +81,5 @@ def crear_persona(request):
     return HttpResponse("Usuario "+nombres+" "+apellidos+", ha sido registrado")
 
 
+def administrador(request):
+    return render(request,'administrador.html',{})

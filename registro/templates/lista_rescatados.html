@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
     <title>Lista Rescatados</title>
 </head>
+<header>
+<div>
+    <div class="footer">
+            <a class="btn btn-outline-secondary" href="{% url "administrador" %}" role="button">Volver a administrador</a>
+    </div>
+    <div>
+    <img src="{% static "img/logo.png" %}" alt="" class="img-fluid mx-auto d-block logo">
+    </div>
+</header>
 <body>
     <h1>Lista de Perritos registrados</h1>
 

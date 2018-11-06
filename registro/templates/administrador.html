@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es_CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FormRescatados</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap-grid.min.css.map" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap-reboot.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/estilosadmin.css" %}" type="text/css">
+    
+    
+</head>
+
+<body>
+    <header class="container-fluid fondo_header">
+        <div>
+                <div class="footer">
+                        <a class="btn btn-outline-secondary" href="{% url "index" %}" role="button">Volver</a>
+                </div>
+            <img src="{% static "img/logo.png" %}" alt="" class="img-fluid mx-auto d-block logo">
+        </div>
+    </header>
+    <div class="container">
+        <div class="row main">
+        
+                    <div class="form-group">
+                        <a href="{% url 'form_rescatado' %}" class="btn btn-success" role="button">Registrar perrito</a>
+                    </div>
+                    <div class="form-group">
+                        <a href="{% url 'lista_rescatados' %}" class="btn btn-success" role="button">Editar perrito</a>
+                    </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static "js/jquery-3.3.1.js" %}"></script>
+    <script src="{% static "js/jquery.validate.js" %}"></script>
+    <script src="{% static "js/javascriptform.js" %}"></script>
+    <script src="{% static "js/javascript12.js" %}"> </script>
+
+</body>
+

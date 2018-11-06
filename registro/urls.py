@@ -16,6 +16,7 @@ urlpatterns = [
     path('form_rescatado/editado/<int:id>', views.editado, name="editado"),
     path('form_rescatado/eliminar/<int:id>', views.eliminar, name="eliminar"),
     path('form_rescatado/buscar/', views.buscar, name="buscar"),
-    path('form/crear_persona',views.crear_persona,name="crear_persona")
+    path('form/crear_persona',views.crear_persona,name="crear_persona"),
+    path('Index/administrador',views.administrador,name="administrador")
 
 ] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

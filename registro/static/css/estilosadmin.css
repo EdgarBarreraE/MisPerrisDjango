@@ -1,0 +1,32 @@
+
+body {
+     height: 100%;
+     background-color: #6DCCAA;
+ 	font-family: 'Oxygen', sans-serif;
+	    background-size: cover;
+}
+
+.main{
+ 	margin:50px 15px;
+}
+
+.container {
+align-items: center;
+
+}
+
+.btn {
+    margin: 20px;
+}
+
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
