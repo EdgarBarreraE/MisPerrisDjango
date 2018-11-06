@@ -7,9 +7,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('index', views.index, name="index"),
+    path('', views.index, name="index"),
     path('form/', views.form, name="form"),
-    path('', views.inicio, name="inicio"),
+    path('login', views.inicio, name="inicio"),
     path('cerrar_sesion', views.cerrar_sesion, name="cerrar_sesion"),
     path('logearse', views.logearse, name="logearse"),
     path('form_rescatado/', views.form_rescatado, name="form_rescatado"),
@@ -21,14 +21,10 @@ urlpatterns = [
     path('form_rescatado/editado/<int:id>', views.editado, name="editado"),
     path('form_rescatado/eliminar/<int:id>', views.eliminar, name="eliminar"),
     path('form_rescatado/buscar/', views.buscar, name="buscar"),
-<<<<<<< HEAD
-    path('form/crear_persona',views.crear_persona,name="crear_persona"),
-    path('Index/administrador',views.administrador,name="administrador")
-=======
     path('form/crear_persona', views.crear_persona, name="crear_persona"),
     path('password', views.change_password, name='change_password'),
+    path('Index/administrador', views.administrador,name="administrador"),
 
 
->>>>>>> MisPerrisDjango1
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
