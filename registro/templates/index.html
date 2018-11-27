@@ -21,7 +21,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb" style="background-color: #85D4B7">
                     {% if user.is_authenticated %}
-                    <li class="breadcrumb-item active" aria-current="page">Hola {{user.first_name}} !</li>
+                    <li class="breadcrumb-item active" aria-current="page">Hola, {{user.username}} !</li>
                     <li class="breadcrumb-item"><a href="{% url "cerrar_sesion" %}">Cerrar Sesion</a></li>
                     {% else %}
                     <li class="breadcrumb-item"><a href="{% url "inicio" %}" style="color:white">Inicia Sesion</a></li>

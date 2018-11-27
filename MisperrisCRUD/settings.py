@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registro'
+    'registro',
+    'rest_framework',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'MisperrisCRUD.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -63,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
                 
             ],
         },
@@ -85,6 +89,13 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+AUTHENTICATION_BACKENDS = (
+ 'social_core.backends.open_id.OpenIdAuth', 
+ 'social_core.backends.google.GoogleOpenId',  
+ 'social_core.backends.google.GoogleOAuth2',  
+ 'django.contrib.auth.backends.ModelBackend',
+)
 
 
 # Password validation
@@ -124,6 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_URL = 'inicio'
+LOGIN_REDIRECT_URL = 'index'
 
 
 MEDIA_URL = '/media/'
@@ -137,3 +150,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ebarreraespinoza@gmail.com'
 EMAIL_HOST_PASSWORD = '*redrevolver12'
 DEFAULT_FROM_EMAIL = 'django.core.mail.backends.smtp.EmailBackend>'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '850889740377-6s5kbctr7f296c62ce61o47hhlau01ei.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'nrh_OP4EFmdk_VDJDVg1XLTI'

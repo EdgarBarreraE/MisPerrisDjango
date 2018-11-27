@@ -4,7 +4,7 @@ from django.contrib.auth import views as auth_views
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.contrib import admin
 
 urlpatterns = [
     path('', views.index, name="index"),
@@ -24,6 +24,9 @@ urlpatterns = [
     path('form/crear_persona', views.crear_persona, name="crear_persona"),
     path('password', views.change_password, name='change_password'),
     path('Index/administrador', views.administrador,name="administrador"),
+    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^auth/', include('social_django.urls', namespace='social')),
+
 
 
 
