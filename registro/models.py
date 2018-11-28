@@ -14,6 +14,10 @@ class Usuario(models.Model):
     tipoCasa = models.CharField(max_length=30)
     region = models.CharField(max_length=100)
     comuna = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return "USUARIO"
+
 
 
 class Rescatado(models.Model):

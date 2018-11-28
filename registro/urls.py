@@ -9,6 +9,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'rescatado', views.RescatadoViewSet)
+router.register(r'usuario', views.UsuarioViewSet)
 
 urlpatterns = [
     path('', views.index, name="index"),
@@ -30,6 +31,7 @@ urlpatterns = [
     path('Index/administrador', views.administrador,name="administrador"),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^auth/', include('social_django.urls', namespace='social')),
-    path('api_rescatado/', include(router.urls))
+    path('api_rescatado/', include(router.urls)),
+    path('api_usuario/', include(router.urls))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
