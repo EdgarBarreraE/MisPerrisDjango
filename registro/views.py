@@ -9,6 +9,8 @@ from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
 
+from .serializer import RescatadoSerializer
+from rest_framework import viewsets
 
 # Create your views here.
 
@@ -123,3 +125,7 @@ def change_password(request):
 
 def administrador(request):
     return render(request,'administrador.html',{})
+
+class RescatadoViewSet(viewsets.ModelViewSet):
+    queryset = Rescatado.objects.all()
+    serializer_class = RescatadoSerializer

@@ -22,3 +22,6 @@ class Rescatado(models.Model):
     raza = models.CharField(max_length=30)
     descripcion = models.TextField()
     estado = models.IntegerField(default=1)
+
+    def __str__(self):
+        return "PERRITO"

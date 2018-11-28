@@ -1,10 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import url, include
 from django.contrib.auth import views as auth_views
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'rescatado', views.RescatadoViewSet)
 
 urlpatterns = [
     path('', views.index, name="index"),
@@ -26,8 +30,6 @@ urlpatterns = [
     path('Index/administrador', views.administrador,name="administrador"),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^auth/', include('social_django.urls', namespace='social')),
-
-
-
+    path('api_rescatado/', include(router.urls))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
