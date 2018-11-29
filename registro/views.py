@@ -134,3 +134,7 @@ class RescatadoViewSet(viewsets.ModelViewSet):
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+
+
+def apibuttons(request):
+    return render(request,'apibuttons.html',{})
