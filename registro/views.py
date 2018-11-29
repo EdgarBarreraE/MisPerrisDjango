@@ -11,7 +11,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 
 from .serializer import RescatadoSerializer
 from .serializer import UsuarioSerializer
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 
 # Create your views here.
 

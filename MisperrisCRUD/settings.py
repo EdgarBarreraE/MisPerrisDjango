@@ -156,3 +156,9 @@ DEFAULT_FROM_EMAIL = 'django.core.mail.backends.smtp.EmailBackend>'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '850889740377-6s5kbctr7f296c62ce61o47hhlau01ei.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'nrh_OP4EFmdk_VDJDVg1XLTI'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES' : ('rest_framework.permissions.IsAuthenticatedOrReadOnly',)
+
+}
