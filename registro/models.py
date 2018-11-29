@@ -28,4 +28,4 @@ class Rescatado(models.Model):
     estado = models.IntegerField(default=1)
 
     def __str__(self):
-        return "PERRITO"
+        return "RESCATADO"

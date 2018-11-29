@@ -5,11 +5,11 @@ from .models import Usuario
 class RescatadoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model=Rescatado
-        fields=('url','id','foto','nombre','raza','descripcion','estado')
+        fields=('url','foto','nombre','raza','descripcion','estado')
 
 
 class UsuarioSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model=Usuario
-        fields=('url','id','nombres','apellidos','rut','email','fechaNacimiento','telefono','tipoCasa','region','comuna')
+        fields=('url','nombres','apellidos','rut','email','fechaNacimiento','telefono','tipoCasa','region','comuna')
 
